@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="POST booking API" skipped="0" tests="2" time="5.58" timestamp="2025-08-16 10:50:21"><testcase name="Create booking successfully with JSON format"/><testcase name="Create booking successfully with XML format"><failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;500&gt;.&#10;" type="java.lang.AssertionError">1 expectation failed.
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="POST booking API" skipped="0" tests="2" time="5.63" timestamp="2025-08-16 11:03:52"><testcase name="Create booking successfully with JSON format"/><testcase name="Create booking successfully with XML format"><failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;500&gt;.&#10;" type="java.lang.AssertionError">1 expectation failed.
 Expected status code &lt;200&gt; but was &lt;500&gt;.
 </failure><system-err>1 expectation failed.
 Expected status code &lt;200&gt; but was &lt;500&gt;.
