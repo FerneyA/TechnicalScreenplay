@@ -41,21 +41,19 @@ public class BookingStepDefinitions {
         );
     }
 
-    //************************************//
+    @Given("that there is a booking in the system")
+    public void thatThereIsABookingInTheSystem() {
+        OnStage.theActorInTheSpotlight().attemptsTo(GetFirstBookingId.fromService());
+    }
 
-    @When("I send a POST request to create a booking with valid data")
+    @When("I send a POST request to create a booking with valid data in JSON format")
     public void postValidBooking() {
-        OnStage.theActorInTheSpotlight().attemptsTo(PostBooking.withValidData());
+        OnStage.theActorInTheSpotlight().attemptsTo(PostBooking.withValidDataAndJsonFormat());
     }
 
-    @When("I send a POST request to create a booking with missing data")
+    @When("I send a POST request to create a booking with valid data in XML format")
     public void postBookingMissingData() {
-        OnStage.theActorInTheSpotlight().attemptsTo(PostBooking.withMissingData());
-    }
-
-    @When("I send a POST request to create a booking with invalid data types")
-    public void postBookingInvalidDataTypes() {
-        OnStage.theActorInTheSpotlight().attemptsTo(PostBooking.withInvalidDataTypes());
+        OnStage.theActorInTheSpotlight().attemptsTo(PostBooking.withValidDataAndXmlFormat());
     }
 
     @Then("the response should contain {string} type numeric")

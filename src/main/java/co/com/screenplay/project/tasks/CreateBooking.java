@@ -1,12 +1,8 @@
 package co.com.screenplay.project.tasks;
 
-import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.rest.interactions.Delete;
-import net.serenitybdd.screenplay.rest.interactions.Patch;
 import net.serenitybdd.screenplay.rest.interactions.Post;
-import net.serenitybdd.screenplay.rest.interactions.Put;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 

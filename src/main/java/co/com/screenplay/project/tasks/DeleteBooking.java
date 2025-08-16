@@ -13,8 +13,9 @@ public class DeleteBooking {
         return Task.where("{0} sends DELETE with valid booking data",
                 (Actor actor) -> {
                     String token = actor.recall("token");
+                    Integer bookingId = actor.recall("bookingId");
                     actor.attemptsTo(
-                            Delete.from("/booking/262").with(request -> request
+                            Delete.from("/booking/" + bookingId).with(request -> request
                                     .header("Content-Type", "application/json")
                                     .header("Accept", "application/json")
                                     .header("Cookie", "token=" + token)
@@ -26,11 +27,16 @@ public class DeleteBooking {
 
     public static Performable withValidFormatXml() {
         return Task.where("{0} sends DELETE with valid booking data",
-                from("/booking/702").with(request -> request
-                        .header("Content-Type", "text/xml")
-                        .header("Accept", "application/xml")
-                        .header("Authorization", "Basic YWRtaW46cGFzc3dvcmQxMjM=")
-                )
+                (Actor actor) -> {
+                    Integer bookingId = actor.recall("bookingId");
+                    actor.attemptsTo(
+                            Delete.from("/booking/" + bookingId).with(request -> request
+                                    .header("Content-Type", "text/xml")
+                                    .header("Accept", "application/xml")
+                                    .header("Authorization", "Basic YWRtaW46cGFzc3dvcmQxMjM=")
+                            )
+                    );
+                }
         );
     }
 }

@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="PATCH booking API" skipped="0" tests="2" time="3.07" timestamp="2025-08-15 07:39:35"><testcase name="Partially update booking successfully in XML format"/><testcase name="Partially update booking successfully in JSON format"/></testsuite>

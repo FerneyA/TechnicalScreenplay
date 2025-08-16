@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>Delete booking successfully in XML format</title>
+    <title>Create booking successfully with XML format</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
@@ -121,7 +121,7 @@
         <span class="breadcrumbs">
             <a href="index.html" class="breadcrumbs">Home</a>
 
-        > Delete booking successfully in XML format
+        > Create booking successfully with XML format
         </span>
         </div>
         <div class="rightbg"></div>
@@ -142,7 +142,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 15-08-2025 15:40</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 15-08-2025 19:39</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -157,7 +157,7 @@
                                 <div>
                                     <h3 class="discreet-story-header">
                                         <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
-                                        <span class="story-header-title">Booking API CRUD Tests</span>
+                                        <span class="story-header-title">POST Booking API</span>
                                     </h3>
                                 </div>
 
@@ -181,10 +181,10 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">
-                                    Delete booking successfully in XML format
+                                <span class="failing-color">
+                                    Create booking successfully with XML format
                                         <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -282,7 +282,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block;">
                                 <span class="top-level-step">
-                                                When I send a DELETE request for a booking in XML format
+                                                When I send a POST request to create a booking with valid data in XML format
                                         </span>
                             </a>
                             <span class="evidence">
@@ -291,7 +291,7 @@
                     </td>
 
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">559ms</span></td>
+                    <td width="100"><span class="top-level-step">641ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -312,7 +312,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
                                style="display:block;">
                                 <span class="nested-step">
-                                                Tester sends DELETE with valid booking data
+                                                Tester sends POST with valid booking data and XML format
                                         </span>
                             </a>
                             <span class="evidence">
@@ -321,7 +321,7 @@
                     </td>
 
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">526ms</span></td>
+                    <td width="100"><span class="nested-step">623ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -342,7 +342,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0-0')"
                                style="display:block;">
                                 <span class="nested-step">
-                                                Tester executes a DELETE on the resource /booking/702
+                                                Tester executes a POST on the resource /booking
                                         </span>
                             </a>
                             <span class="evidence">
@@ -351,7 +351,7 @@
                     </td>
 
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">510ms</span></td>
+                    <td width="100"><span class="nested-step">605ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -368,7 +368,7 @@
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                DELETE https://restful-booker.herokuapp.com/booking/702
+                                                POST https://restful-booker.herokuapp.com/booking
                                         </span>
                             <span class="evidence">
                                         <span class="piece-of-evidence">
@@ -384,15 +384,17 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4>Response</h4>
-                                    <p>URL: https://restful-booker.herokuapp.com/booking/702</p>
-                                    <p>Status code: 201</p>
+                                    <p>URL: https://restful-booker.herokuapp.com/booking</p>
+                                    <p>Status code: 500</p>
                                     <p>Content Type: application/xml</p>
                                     <h4>Request Headers</h4>
-                                    <pre>Accept=application/xml<br>Authorization=Basic YWRtaW46cGFzc3dvcmQxMjM=<br>Content-Type=text/xml; charset=ISO-8859-1</pre>
+                                    <pre>Accept=application/xml<br>Content-Type=text/xml; charset=ISO-8859-1</pre>
+                                    <h4>Content Body</h4>
+                                    <pre>&lt;booking&gt;<br>  &lt;firstname&gt;Jim&lt;/firstname&gt;<br>  &lt;lastname&gt;Brown&lt;/lastname&gt;<br>  &lt;totalprice&gt;111&lt;/totalprice&gt;<br>  &lt;depositpaid&gt;true&lt;/depositpaid&gt;<br>  &lt;bookingdates&gt;<br>    &lt;checkin&gt;2018-01-01&lt;/checkin&gt;<br>    &lt;checkout&gt;2019-01-01&lt;/checkout&gt;<br>  &lt;/bookingdates&gt;<br>  &lt;additionalneeds&gt;Breakfast&lt;/additionalneeds&gt;<br>&lt;/booking&gt;</pre>
                                     <h4>Response Headers</h4>
-                                    <pre>Content-Length: 7<br>Content-Type: text/plain; charset=utf-8<br>Date: Fri, 15 Aug 2025 20:40:23 GMT<br>Etag: W/&quot;7-rM9AyJuqT6iOan/xHh+AW+7K/T8&quot;<br>Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}<br>Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=lhVbnJ%2FXHFb3zxMGJfbRktX6iezfnpVDC06B3E9xPKk%3D&#92;0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&#92;0026ts=1755290423&quot;}],&quot;max_age&quot;:3600}<br>Reporting-Endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=lhVbnJ%2FXHFb3zxMGJfbRktX6iezfnpVDC06B3E9xPKk%3D&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;ts=1755290423&quot;<br>Server: Heroku<br>Via: 1.1 heroku-router<br>X-Powered-By: Express</pre>
+                                    <pre>Content-Length: 21<br>Content-Type: text/plain; charset=utf-8<br>Date: Sat, 16 Aug 2025 00:39:28 GMT<br>Etag: W/&quot;15-/6VXivhc2MKdLfIkLcUE47K6aH0&quot;<br>Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}<br>Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=ak6fa7rdTe20gKk2GIU5JbqEUA596jeTHSfdxY3%2FVZw%3D&#92;0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&#92;0026ts=1755304768&quot;}],&quot;max_age&quot;:3600}<br>Reporting-Endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=ak6fa7rdTe20gKk2GIU5JbqEUA596jeTHSfdxY3%2FVZw%3D&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;ts=1755304768&quot;<br>Server: Heroku<br>Via: 1.1 heroku-router<br>X-Powered-By: Express</pre>
                                 <h4>Response Body</h4>
-                                    <pre>Created</pre>
+                                    <pre>Internal Server Error</pre>
                                     <h4>Response Cookies</h4>
                                     <pre></pre>
                             </div>
@@ -419,13 +421,13 @@
                             </table>
                         </td>
                     </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-FAILURE">
 
                     <td width="50" class="step-icon">
                         <a name="1"></a>
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
                                style="display:block">
-                                <i class="bi bi-caret-right-square imgstepSection1 success-icon"
+                                <i class="bi bi-caret-right-square imgstepSection1 failure-icon"
                                    style="margin-left: 20px; float:left; padding-right:5px"></i>
                             </a>
                     </td>
@@ -435,7 +437,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
                                style="display:block;">
                                 <span class="top-level-step">
-                                                Then the response status code should be 201
+                                                Then the response status code should be 200
                                         </span>
                             </a>
                             <span class="evidence">
@@ -443,18 +445,18 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step"></span></td>
+                    <td width="130"><span class="top-level-step">FAILURE</span></td>
+                    <td width="100"><span class="top-level-step">049ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
                             <table id="stepSection1" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
+                <tr class="test-FAILURE">
 
                     <td width="70" class="step-icon">
                         <a name="1-0"></a>
                             <span style="margin-left: 40px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a>
                                 </span>
                     </td>
 
@@ -468,17 +470,55 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step"></span></td>
+                    <td width="130"><span class="nested-group-step">FAILURE</span></td>
+                    <td width="100"><span class="nested-group-step">027ms</span></td>
                 </tr>
+                    <tr class="test-FAILURE">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="3" class="error-message-cell">
+
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">java.lang.AssertionError: 1 expectation failed.<br>Expected status code &lt;200&gt; but was &lt;500&gt;.<br></span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-6"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)<br />io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy:-1)<br />io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)<br />io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)<br />io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)<br />co.com.screenplay.project.stepdefinitions.BookingStepDefinitions.lambda$theResponseStatusCodeShouldBe$0(BookingStepDefinitions.java:40)<br />co.com.screenplay.project.stepdefinitions.BookingStepDefinitions.theResponseStatusCodeShouldBe(BookingStepDefinitions.java:38)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                        </td>
+                    </tr>
 
                             </table>
                         </td>
                     </tr>
-            <tr class="test-SUCCESS">
+            <tr class="test-FAILURE">
                     <td colspan="2"></td>
-                <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                <td width="100"><span class="top-level-step"><em>0.56s</em></span></td>
+                <td width="130"><span class="top-level-step"><em>FAILURE</em></span></td>
+                <td width="100"><span class="top-level-step"><em>0.64s</em></span></td>
             </tr>
 
         </table>

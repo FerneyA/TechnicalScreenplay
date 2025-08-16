@@ -11,4 +11,4 @@ import org.junit.runner.RunWith;
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         plugin = {"pretty"}
 )
-public class BookingIdRunner {}
+public class BookingRunner {}

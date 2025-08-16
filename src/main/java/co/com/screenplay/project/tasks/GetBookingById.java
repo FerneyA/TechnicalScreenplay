@@ -9,16 +9,15 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class GetBookingById implements Task {
 
-    private final String bookingId;
     private final String contentType;
 
-    public GetBookingById(String bookingId, String contentType) {
-        this.bookingId = bookingId;
+    public GetBookingById(String contentType) {
         this.contentType = contentType;
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+        Integer bookingId = actor.recall("bookingId");
         actor.attemptsTo(
                 Get.resource("/booking/" + bookingId)
                         .with(request -> request
@@ -29,7 +28,7 @@ public class GetBookingById implements Task {
         SerenityRest.lastResponse().prettyPrint();
     }
 
-    public static GetBookingById withIdAndFormat(String bookingId, String contentType) {
-        return instrumented(GetBookingById.class, bookingId, contentType);
+    public static GetBookingById withFormat(String contentType) {
+        return instrumented(GetBookingById.class, contentType);
     }
 }

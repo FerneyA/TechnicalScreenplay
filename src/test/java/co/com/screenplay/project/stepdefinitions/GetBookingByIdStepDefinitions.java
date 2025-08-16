@@ -13,10 +13,10 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
 public class GetBookingByIdStepDefinitions {
 
-    @Given("the actor queries the booking with id {string} in {string} format")
-    public void theActorQueriesTheBookingWithIdInFormat(String bookingId, String contentType) {
+    @Given("the actor queries the bookingId in {string} format")
+    public void theActorQueriesTheBookingIdInFormat(String contentType) {
         OnStage.theActorInTheSpotlight().attemptsTo(
-                GetBookingById.withIdAndFormat(bookingId, contentType)
+                GetBookingById.withFormat(contentType)
         );
     }
 
@@ -24,7 +24,7 @@ public class GetBookingByIdStepDefinitions {
     public void theActorMustViewTheBookingInformationAtJson() {
         OnStage.theActorInTheSpotlight().should(
                 seeThat("El código de respuesta", ResponseStatus.code(), equalTo(200)),
-                seeThat("El contenido", ResponseContent.body(), containsString("\"firstname\":\"Josh\""))
+                seeThat("El contenido", ResponseContent.body(), containsString("\"firstname\":"))
         );
     }
 
@@ -32,7 +32,8 @@ public class GetBookingByIdStepDefinitions {
     public void theActorMustViewTheBookingInformationAtXml() {
         OnStage.theActorInTheSpotlight().should(
                 seeThat("El código de respuesta", ResponseStatus.code(), equalTo(200)),
-                seeThat("El contenido", ResponseContent.body(), containsString("<firstname>Josh</firstname>"))
+                seeThat("El contenido", ResponseContent.body(), containsString("<firstname>")),
+                seeThat("El contenido", ResponseContent.body(), containsString("</firstname>"))
         );
     }
 }

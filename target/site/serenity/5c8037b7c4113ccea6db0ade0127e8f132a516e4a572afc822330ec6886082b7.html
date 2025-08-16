@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>Get reservation in format JSON</title>
+    <title>Create booking successfully with JSON format</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
@@ -121,9 +121,7 @@
         <span class="breadcrumbs">
             <a href="index.html" class="breadcrumbs">Home</a>
 
- <!-- inflection.of(breadcrumb.displayName).asATitle()-->
-            > <a href="#">Obtener informaci&oacute;n de una reserva</a>
-        > Get reservation in format JSON
+        > Create booking successfully with JSON format
         </span>
         </div>
         <div class="rightbg"></div>
@@ -144,7 +142,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 15-08-2025 15:40</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 15-08-2025 19:39</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -158,10 +156,9 @@
                         <td>
                                 <div>
                                     <h3 class="discreet-story-header">
-                                        <i class="fs-2 bi bi-chat-left-quote title-icon"></i>
-                                        <span class="story-header-title">Obtener Información De Una Reserva </span>
+                                        <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                        <span class="story-header-title">POST Booking API</span>
                                     </h3>
-
                                 </div>
 
                         </td>
@@ -170,7 +167,7 @@
                                     <span class="badge example-tag tag-badge" style="background:default;">
                                     <i class="bi bi-tag-fill"></i>&nbsp;
                                         <a class="tagLink" style="background:default;"
-                                           href="2a5b6a7be0f08df02d8ab0b4d4c68648c2695c6c7ef0658c71de4d42b1415b18.html">Under 1 Second
+                                           href="6c5512236937b92cd7a296b24edb966c2bd94be46b8910f8b129a42d6150eb25.html">1 To 10 Seconds
                                               (Duration)
                                         </a>
                                 </span>
@@ -184,10 +181,10 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
                             <span class="test-case-title">
-                                <span class="failing-color">
-                                    Get reservation in format JSON
+                                <span class="success-color">
+                                    Create booking successfully with JSON format
                                         <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -285,7 +282,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block;">
                                 <span class="top-level-step">
-                                                Given the actor queries the booking with id '268' in 'application/json' format
+                                                When I send a POST request to create a booking with valid data in JSON format
                                         </span>
                             </a>
                             <span class="evidence">
@@ -294,7 +291,7 @@
                     </td>
 
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">540ms</span></td>
+                    <td width="100"><span class="top-level-step">3s 717ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -315,7 +312,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
                                style="display:block;">
                                 <span class="nested-step">
-                                                Tester get booking by
+                                                Tester sends POST with valid booking data and JSON format
                                         </span>
                             </a>
                             <span class="evidence">
@@ -324,7 +321,7 @@
                     </td>
 
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">526ms</span></td>
+                    <td width="100"><span class="nested-step">3s 282ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -345,7 +342,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0-0')"
                                style="display:block;">
                                 <span class="nested-step">
-                                                Tester executes a GET on the resource /booking/268
+                                                Tester executes a POST on the resource /booking
                                         </span>
                             </a>
                             <span class="evidence">
@@ -354,7 +351,7 @@
                     </td>
 
                     <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">482ms</span></td>
+                    <td width="100"><span class="nested-step">3s 240ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -371,7 +368,7 @@
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                GET https://restful-booker.herokuapp.com/booking/268
+                                                POST https://restful-booker.herokuapp.com/booking
                                         </span>
                             <span class="evidence">
                                         <span class="piece-of-evidence">
@@ -387,15 +384,17 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4>Response</h4>
-                                    <p>URL: https://restful-booker.herokuapp.com/booking/268</p>
-                                    <p>Status code: 404</p>
+                                    <p>URL: https://restful-booker.herokuapp.com/booking</p>
+                                    <p>Status code: 200</p>
                                     <p>Content Type: application/json</p>
                                     <h4>Request Headers</h4>
-                                    <pre>Accept=application/json<br>Content-Type=application/json</pre>
+                                    <pre>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Content Body</h4>
+                                    <pre>{<br>    &quot;firstname&quot;: &quot;John&quot;,<br>    &quot;lastname&quot;: &quot;Doe&quot;,<br>    &quot;totalprice&quot;: 123,<br>    &quot;depositpaid&quot;: true,<br>    &quot;bookingdates&quot;: {<br>        &quot;checkin&quot;: &quot;2025-01-01&quot;,<br>        &quot;checkout&quot;: &quot;2025-01-10&quot;<br>    },<br>    &quot;additionalneeds&quot;: &quot;Breakfast&quot;<br>}</pre>
                                     <h4>Response Headers</h4>
-                                    <pre>Content-Length: 9<br>Content-Type: text/plain; charset=utf-8<br>Date: Fri, 15 Aug 2025 20:40:24 GMT<br>Etag: W/&quot;9-0gXL1ngzMqISxa6S1zx3F4wtLyg&quot;<br>Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}<br>Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=HMgfxV62%2F%2FXL2Y0bbn4Jv3f22X%2ButXsNZKC18oRAQhk%3D&#92;0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&#92;0026ts=1755290424&quot;}],&quot;max_age&quot;:3600}<br>Reporting-Endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=HMgfxV62%2F%2FXL2Y0bbn4Jv3f22X%2ButXsNZKC18oRAQhk%3D&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;ts=1755290424&quot;<br>Server: Heroku<br>Via: 1.1 heroku-router<br>X-Powered-By: Express</pre>
+                                    <pre>Content-Length: 196<br>Content-Type: application/json; charset=utf-8<br>Date: Sat, 16 Aug 2025 00:39:26 GMT<br>Etag: W/&quot;c4-piX42LJn9BsWQX9e7R9hgVMTIjY&quot;<br>Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}<br>Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=U9gbS9jlgq%2BRL%2FyOhVFuty6ZI9WJsp0bwR7zIf%2BJcMI%3D&#92;0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&#92;0026ts=1755304766&quot;}],&quot;max_age&quot;:3600}<br>Reporting-Endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=U9gbS9jlgq%2BRL%2FyOhVFuty6ZI9WJsp0bwR7zIf%2BJcMI%3D&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;ts=1755304766&quot;<br>Server: Heroku<br>Via: 1.1 heroku-router<br>X-Powered-By: Express</pre>
                                 <h4>Response Body</h4>
-                                    <pre>Not Found</pre>
+                                    <pre>{<br>    &quot;bookingid&quot;: 4149,<br>    &quot;booking&quot;: {<br>        &quot;firstname&quot;: &quot;John&quot;,<br>        &quot;lastname&quot;: &quot;Doe&quot;,<br>        &quot;totalprice&quot;: 123,<br>        &quot;depositpaid&quot;: true,<br>        &quot;bookingdates&quot;: {<br>            &quot;checkin&quot;: &quot;2025-01-01&quot;,<br>            &quot;checkout&quot;: &quot;2025-01-10&quot;<br>        },<br>        &quot;additionalneeds&quot;: &quot;Breakfast&quot;<br>    }<br>}</pre>
                                     <h4>Response Cookies</h4>
                                     <pre></pre>
                             </div>
@@ -422,13 +421,13 @@
                             </table>
                         </td>
                     </tr>
-                <tr class="test-FAILURE">
+                <tr class="test-SUCCESS">
 
                     <td width="50" class="step-icon">
                         <a name="1"></a>
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
                                style="display:block">
-                                <i class="bi bi-caret-right-square imgstepSection1 failure-icon"
+                                <i class="bi bi-caret-right-square imgstepSection1 success-icon"
                                    style="margin-left: 20px; float:left; padding-right:5px"></i>
                             </a>
                     </td>
@@ -438,7 +437,7 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
                                style="display:block;">
                                 <span class="top-level-step">
-                                                Then the actor must view the booking information at JSON
+                                                Then the response status code should be 200
                                         </span>
                             </a>
                             <span class="evidence">
@@ -446,140 +445,98 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="top-level-step">FAILURE</span></td>
-                    <td width="100"><span class="top-level-step">031ms</span></td>
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">158ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
                             <table id="stepSection1" class="step-table-nested" style="display:none;">
-                <tr class="test-FAILURE">
+                <tr class="test-SUCCESS">
 
                     <td width="70" class="step-icon">
                         <a name="1-0"></a>
                             <span style="margin-left: 40px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a>
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Then El c&Atilde;&sup3;digo de respuesta should be (200)
+                                                Status code is correct
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">FAILURE</span></td>
-                    <td width="100"><span class="nested-group-step"></span></td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">032ms</span></td>
                 </tr>
-                    <tr class="test-FAILURE">
-                        <td width="40">&nbsp</td>
-                        <td width="%" colspan="3" class="error-message-cell">
-
-
-    <div style="display:block">
-        <div class="table">
-            <div class="row">
-                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">java.lang.AssertionError: <br>Expected: &lt;200&gt;<br>     but: was &lt;404&gt;</span>
-                </div>
-                <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-6"
-                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
-                </div>
-             </div>
-        </div>
-    <div>
-
-    <!-- Details Section -->
-    <div class="row stacktrace-details">
-      <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-6">
-            <div class="card">
-                <div class="card-header">
-                    <h4>java.lang.AssertionError </h4>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <pre>co.com.screenplay.project.stepdefinitions.GetBookingByIdStepDefinitions.theActorMustViewTheBookingInformationAtJson(GetBookingByIdStepDefinitions.java:25)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-                        </td>
-                    </tr>
-                <tr class="test-FAILURE">
-
-                    <td width="70" class="step-icon">
-                        <a name="1-1"></a>
-                            <span style="margin-left: 40px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a>
-                                </span>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                                <span class="nested-group-step">
-                                                Then El contenido should be a string containing '\'firstname\':\'Josh\''
-                                        </span>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-group-step">FAILURE</span></td>
-                    <td width="100"><span class="nested-group-step">015ms</span></td>
-                </tr>
-                    <tr class="test-FAILURE">
-                        <td width="40">&nbsp</td>
-                        <td width="%" colspan="3" class="error-message-cell">
-
-
-    <div style="display:block">
-        <div class="table">
-            <div class="row">
-                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">java.lang.AssertionError: <br>Expected: a string containing &quot;\&quot;firstname\&quot;:\&quot;Josh\&quot;&quot;<br>     but: was &quot;Not Found&quot;</span>
-                </div>
-                <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-7"
-                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
-                </div>
-             </div>
-        </div>
-    <div>
-
-    <!-- Details Section -->
-    <div class="row stacktrace-details">
-      <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-7">
-            <div class="card">
-                <div class="card-header">
-                    <h4>java.lang.AssertionError </h4>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <pre>co.com.screenplay.project.stepdefinitions.GetBookingByIdStepDefinitions.theActorMustViewTheBookingInformationAtJson(GetBookingByIdStepDefinitions.java:25)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-                        </td>
-                    </tr>
 
                             </table>
                         </td>
                     </tr>
-            <tr class="test-FAILURE">
+                <tr class="test-SUCCESS">
+
+                    <td width="50" class="step-icon">
+                        <a name="2"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection2 success-icon"
+                                   style="margin-left: 20px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
+                               style="display:block;">
+                                <span class="top-level-step">
+                                                And the response should contain "bookingid" type numeric
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">775ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection2" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="2-0"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Then response body contains$$ lambda$728/0x000001d4d35962f8
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">757ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+            <tr class="test-SUCCESS">
                     <td colspan="2"></td>
-                <td width="130"><span class="top-level-step"><em>FAILURE</em></span></td>
-                <td width="100"><span class="top-level-step"><em>0.52s</em></span></td>
+                <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                <td width="100"><span class="top-level-step"><em>3.88s</em></span></td>
             </tr>
 
         </table>
