@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Get Booking IDs" skipped="0" tests="3" time="2.11" timestamp="2025-08-15 07:39:33"><testcase name="Get list of booking IDs"><failure message="&#13;&#10;Expected: is not an empty collection&#13;&#10;     but: was &lt;[]&gt;" type="java.lang.AssertionError">&#13;
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Get Booking IDs" skipped="0" tests="3" time="2.04" timestamp="2025-08-16 10:50:33"><testcase name="Get list of booking IDs"><failure message="&#13;&#10;Expected: is not an empty collection&#13;&#10;     but: was &lt;[]&gt;" type="java.lang.AssertionError">&#13;
 Expected: is not an empty collection&#13;
      but: was &lt;[]&gt;</failure><system-err>&#13;
 Expected: is not an empty collection&#13;
      but: was &lt;[]&gt;&#13;
 co.com.screenplay.project.questions.BookingIdsResponse.answeredBy(BookingIdsResponse.java:38)&#13;
 co.com.screenplay.project.questions.BookingIdsResponse.answeredBy(BookingIdsResponse.java:15)&#13;
-co.com.screenplay.project.stepdefinitions.BookingStepDefinitions.theBookingIDsListShouldNotBeEmpty(BookingStepDefinitions.java:31)&#13;
+co.com.screenplay.project.stepdefinitions.GetBookingByIdStepDefinitions.theBookingIDsListShouldNotBeEmpty(GetBookingByIdStepDefinitions.java:67)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
 </system-err></testcase></testsuite>

@@ -9,7 +9,9 @@ Este proyecto implementa pruebas automatizadas para APIs utilizando:
 - **RestAssured** para la interacción con servicios REST.
 
 La estructura sigue **buenas prácticas** de Clean Code y arquitectura de pruebas.
-- **Nota** para ejecutar los escenarios por consola escribir: gradle clean test 
+- **Nota** para ejecutar los escenarios por consola escribir: 
+$env:BOOKING_USERNAME="admin"; $env:BOOKING_PASSWORD="password123"; ./gradlew clean test
+
 y el reporte de Serenity BDD se mostrará en la rura target/site/serenity/index.html
 ---
 

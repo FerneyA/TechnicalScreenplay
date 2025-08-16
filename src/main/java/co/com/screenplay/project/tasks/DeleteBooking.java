@@ -5,8 +5,6 @@ import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.rest.interactions.Delete;
 
-import static net.serenitybdd.screenplay.rest.interactions.Delete.from;
-
 public class DeleteBooking {
 
     public static Performable withValidFormatJson() {

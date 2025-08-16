@@ -1,6 +1,5 @@
 package co.com.screenplay.project.stepdefinitions;
 
-import co.com.screenplay.project.questions.BookingIdsResponse;
 import co.com.screenplay.project.questions.ResponseBodyContains;
 import co.com.screenplay.project.tasks.*;
 import io.cucumber.java.en.Given;
@@ -9,37 +8,8 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
 
 public class BookingStepDefinitions {
-
-    @Given("the actor wants to retrieve booking IDs with {string}")
-    public void theActorWantsToRetrieveBookingIDs(String filter) {
-        OnStage.theActorInTheSpotlight().remember("filter", filter);
-    }
-
-    @When("the actor sends the request to get booking IDs")
-    public void theActorSendsTheRequestToGetBookingIDs() {
-        String filter = OnStage.theActorInTheSpotlight().recall("filter");
-        OnStage.theActorInTheSpotlight().attemptsTo(
-                GetBookingIds.withFilter(filter)
-        );
-    }
-
-    @Then("the booking IDs list should not be empty")
-    public void theBookingIDsListShouldNotBeEmpty() {
-        OnStage.theActorInTheSpotlight().should(
-                seeThat(BookingIdsResponse.isEmpty(false))
-        );
-    }
-
-    @Then("the response status code should be {int}")
-    public void theResponseStatusCodeShouldBe(int statusCode) {
-        OnStage.theActorInTheSpotlight().should(
-                seeThatResponse("Status code is correct",
-                        response -> response.statusCode(statusCode))
-        );
-    }
 
     @Given("that there is a booking in the system")
     public void thatThereIsABookingInTheSystem() {

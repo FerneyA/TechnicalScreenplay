@@ -7,6 +7,10 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.rest.interactions.Post;
 
 public class Authenticate implements Task {
+
+    private static final String USERNAME = System.getenv("BOOKING_USERNAME");
+    private static final String PASSWORD = System.getenv("BOOKING_PASSWORD");
+
     public static Authenticate asAdmin() {
         return Tasks.instrumented(Authenticate.class);
     }
@@ -16,7 +20,7 @@ public class Authenticate implements Task {
         actor.attemptsTo(
                 Post.to("/auth").with(request -> request
                         .header("Content-Type", "application/json")
-                        .body("{\"username\":\"admin\",\"password\":\"password123\"}")
+                        .body(String.format("{\"username\":\"%s\",\"password\":\"%s\"}", USERNAME, PASSWORD))
                 )
         );
         String token = SerenityRest.lastResponse().jsonPath().getString("token");

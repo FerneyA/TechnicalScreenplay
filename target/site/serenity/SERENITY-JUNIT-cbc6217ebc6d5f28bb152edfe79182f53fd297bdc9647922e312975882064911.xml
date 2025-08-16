@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="PUT booking API" skipped="0" tests="2" time="2.92" timestamp="2025-08-15 07:39:38"><testcase name="Update booking successfully"/><testcase name="Update booking with invalid token"/></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="PUT booking API" skipped="0" tests="2" time="2.84" timestamp="2025-08-16 10:50:38"><testcase name="Update booking successfully"/><testcase name="Update booking with invalid token"/></testsuite>

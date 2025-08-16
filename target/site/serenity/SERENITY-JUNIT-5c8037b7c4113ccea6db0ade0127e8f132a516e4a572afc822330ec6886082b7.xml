@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="POST booking API" skipped="0" tests="2" time="5.56" timestamp="2025-08-15 07:39:21"><testcase name="Create booking successfully with JSON format"/><testcase name="Create booking successfully with XML format"><failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;500&gt;.&#10;" type="java.lang.AssertionError">1 expectation failed.
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="POST booking API" skipped="0" tests="2" time="5.58" timestamp="2025-08-16 10:50:21"><testcase name="Create booking successfully with JSON format"/><testcase name="Create booking successfully with XML format"><failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;500&gt;.&#10;" type="java.lang.AssertionError">1 expectation failed.
 Expected status code &lt;200&gt; but was &lt;500&gt;.
 </failure><system-err>1 expectation failed.
 Expected status code &lt;200&gt; but was &lt;500&gt;.
@@ -8,8 +8,8 @@ io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequi
 io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)&#13;
 io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)&#13;
 io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)&#13;
-co.com.screenplay.project.stepdefinitions.BookingStepDefinitions.lambda$theResponseStatusCodeShouldBe$0(BookingStepDefinitions.java:40)&#13;
-co.com.screenplay.project.stepdefinitions.BookingStepDefinitions.theResponseStatusCodeShouldBe(BookingStepDefinitions.java:38)&#13;
+co.com.screenplay.project.stepdefinitions.GetBookingByIdStepDefinitions.lambda$theResponseStatusCodeShouldBe$0(GetBookingByIdStepDefinitions.java:61)&#13;
+co.com.screenplay.project.stepdefinitions.GetBookingByIdStepDefinitions.theResponseStatusCodeShouldBe(GetBookingByIdStepDefinitions.java:59)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
 </system-err></testcase></testsuite>
