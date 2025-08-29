@@ -3,6 +3,7 @@ Feature: PUT booking API
   Want to validate the PUT operation in the booking API
   To ensure that the service works correctly with valid and invalid data.
 
+  @Regression
   Scenario: Update booking successfully
     Given that there is a booking in the system
     And a user with a valid token
